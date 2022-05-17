@@ -26,6 +26,7 @@ public  class  Personne {
 	private String nom; // Nom de la personne
 	private String prenom; // Prénom de la personne
 	private int age;
+	private Voiture voiture;
 
 	/**
 	 * Constructeur sans argument. Permet d'initialiser les attributs aux
@@ -49,6 +50,20 @@ public  class  Personne {
 		this.age = age;
 		nbPersonnesCreees++;
 	}
+	
+	/**
+    * Permet d'initialiser les attributs prénom, et nom
+    * 
+    * @param prenom Prénom de la personne
+    * @param nom Nom de la personne
+    */
+   public Personne(String nom, String prenom, int age, Voiture v) {
+      this.nom = nom;
+      this.prenom = prenom;
+      this.age = age;
+      nbPersonnesCreees++;
+      voiture = v;
+   }
 
 	/**
 	 * Permet d'initialiser ou modifier le nom
@@ -112,7 +127,8 @@ public  class  Personne {
 	 */
 	public String toString() {
 		return (DESCRPTION_PRENOM + getPrenom() + DESCRPTION_NOM + getNom()
-				+ DESCRPTION_AGE + getAge() + DESCRPTION_NB_PERSONNES_CREES + nbPersonnesCreees );
+				+ DESCRPTION_AGE + getAge() + DESCRPTION_NB_PERSONNES_CREES + nbPersonnesCreees ) 
+		      + "\n " + (voiture == null ? "" : voiture.toString());
 	}
 	
 	/**
