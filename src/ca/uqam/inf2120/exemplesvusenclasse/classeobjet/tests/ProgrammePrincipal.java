@@ -1,6 +1,7 @@
 package ca.uqam.inf2120.exemplesvusenclasse.classeobjet.tests;
 
 import ca.uqam.inf2120.exemplesvusenclasse.classeobjet.Personne;
+import ca.uqam.inf2120.exemplesvusenclasse.classeobjet.Voiture;
 
 
 /**
@@ -17,8 +18,10 @@ public class ProgrammePrincipal {
 	 */
 	public static void main(String[] args) {
 		
+	   Voiture voiture = new Voiture("Mazda Tribute", "Rouge Feu  Métallisé", 2005, 4);
+	   
 		// Créer et afficher l'objet personneUn
-		Personne personneUn = new Personne("Heraux", "Daniel", 101);
+		Personne personneUn = new Personne("Heraux", "Daniel", 101, voiture);
 		System.out.println( personneUn); //.afficher();
 		
 		// Créer et afficher l'objet personneDeux
